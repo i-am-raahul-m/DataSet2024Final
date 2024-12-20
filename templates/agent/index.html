@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Service Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0056b3;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+        }
+
+        .section {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .section h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .user-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .user-list li {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .user-list li:hover {
+            background-color: #eef2f5;
+        }
+
+        .user-list strong {
+            color: #007bff;
+        }
+
+        .no-summary-message,
+        .all-summaries-message {
+            font-style: italic;
+            color: #888;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Customer Service Dashboard</h1>
+    </header>
+
+    <div class="container">
+
+        <!-- Section for Users with Summaries -->
+        <div class="section">
+            <h2>Users with Summaries</h2>
+            {% if user_summaries %}
+                <ul class="user-list">
+                    {% for user_summary in user_summaries %}
+                        <li>
+                            <strong>User ID:</strong> {{ user_summary.user_id }}<br>
+                            <strong>Summary:</strong> {{ user_summary.summary }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="no-summary-message">No user summaries available.</p>
+            {% endif %}
+        </div>
+
+        <!-- Section for Users Without Summaries -->
+        <div class="section">
+            <h2>Users Without Summaries</h2>
+            {% if no_summary_users %}
+                <ul class="user-list">
+                    {% for user_id in no_summary_users %}
+                        <li>User ID: {{ user_id }} - No summary available</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="all-summaries-message">All users have summaries!</p>
+            {% endif %}
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Customer Service Dashboard | All rights reserved</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice Complaint System</title>
+  <link rel="stylesheet" href="/static/voice_styles.css">
+</head>
+<body>
+  <h1>Voice Complaint Registration</h1>
+  <p>Record your voice complaint and send it to customer care:</p>
+  
+  <div class="recorder">
+    <button id="recordBtn">🎤 Start Recording</button>
+    <button id="stopBtn" disabled>⏹️ Stop Recording</button>
+    <p id="status">Status: Idle</p>
+  </div>
+
+  <audio id="audioPlayback" controls style="display: none;"></audio>
+  <button id="sendBtn" disabled>📤 Send Complaint</button>
+  
+  <div id="result"></div>
+
+  <script src="/static/voice_script.js"></script>
+</body>
+</html>

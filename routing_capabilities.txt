@@ -1,0 +1,15 @@
+General Inquiries: Provide product, pricing, and policy information.
+Order Management: Track, modify, cancel orders and generate invoices.
+Website Navigation and Search Assistance: Guide users to find products or services.
+Account and Profile Management: Help create, update, or recover accounts.
+Technical Support and Troubleshooting: Resolve common product and system issues.
+Scheduling and Appointments: Book, remind, and sync appointments.
+Payment and Billing: Process payments, handle invoices, and issue refunds.
+Live Chat Assistance: Offer real-time chat support and agent handoff.
+Customer Feedback and Surveys: Distribute surveys and collect reviews/feedback.
+Personalized Recommendations: Suggest products or services based on user data.
+Language Support and Translation: Provide multi-language support with contextual translation.
+Social Media Integration: Handle customer queries via social media platforms.
+Proactive Customer Engagement: Notify customers of new products or promotions.
+Administrative and Reporting Tasks: Automate data entry and generate internal reports.
+Advanced AI Features: Use NLU, sentiment analysis, and context-awareness for better responses.
