@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 import mysql.connector
 from contextlib import contextmanager
+from routing_copy import main
 
 # MySQL connection details
 host = "localhost"
@@ -67,4 +68,5 @@ def customer_summary():
     return render_template("agent/index.html", user_summaries=user_summaries, no_summary_users=no_summary_users)
 
 if __name__ == "__main__":
+   main()
    app.run(debug=True, host='127.0.0.1', port=5003)
